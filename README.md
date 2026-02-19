@@ -1,16 +1,17 @@
 # Bresenham's Algorith  
 ```py
-dx = x1 - x0
-dy = y1 - y0
+dx = x1 - x0    // delta x
+dy = y1 - y0    // delta y
 
-D = 2*dy - dx
+D = 2*dy - dx   // binary shift 1<<
 
-y = y1
 x = x0
-while x < x1:
+y = y1
+
+while x < x1:   // 5 bit magnitude comparator
     plot(x, y)
 
-    if D > 0:
+    if D > 0:   // NOT 2s complement MSB
         y = y + 1
         D = D - 2*dx
 
@@ -25,5 +26,24 @@ dy = abs(y1 - y0)
 sx = (x0 < x1) ? 1 : -1
 sy = (y0 < y1) ? 1 : -1
 
+err = dx - dy
 
+x = x0
+y = y0
+
+while true:
+    plot(x, y)
+
+    if x == x1 && y == y1:
+        break
+    
+    e2 = 2 * err
+
+    if e2 > -dy:
+        err = err - dy
+        x = x + sx
+    
+    if e2 < dx:
+        err = err + dx
+        y = y + sy
 ```

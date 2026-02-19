@@ -18,7 +18,7 @@ while x < x1:   # 5 bit magnitude comparator
     D = D + 2*dy
 ```
 
-# Multidirectional  
+# All octant line draws  
 ```py
 dx = abs(x1 - x0)
 dy = abs(y1 - y0)
@@ -26,24 +26,20 @@ dy = abs(y1 - y0)
 sx = (x0 < x1) ? 1 : -1
 sy = (y0 < y1) ? 1 : -1
 
-err = dx - dy
-
-x = x0
-y = y0
+err = dx + dy
 
 while true:
-    plot(x, y)
+    plot(x0, y0)
 
-    if x == x1 && y == y1:
-        break
-    
     e2 = 2 * err
 
-    if e2 > -dy:
-        err = err - dy
-        x = x + sx
-    
-    if e2 < dx:
+    if e2 >= dy:
+        if x0 == x1 break
+        err = err + dy
+        x0 = x0 + sx
+
+    if e2 <= dx:
+        if y0 == y1 break
         err = err + dx
-        y = y + sy
+        y0 = y0 + sy
 ```

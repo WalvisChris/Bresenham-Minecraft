@@ -1,17 +1,17 @@
 # Bresenham's Algorith  
 ```py
-dx = x1 - x0    // delta x
-dy = y1 - y0    // delta y
+dx = x1 - x0    # delta x
+dy = y1 - y0    # delta y
 
-D = 2*dy - dx   // binary shift 1<<
+D = 2*dy - dx   # binary shift 1<<
 
 x = x0
 y = y1
 
-while x < x1:   // 5 bit magnitude comparator
+while x < x1:   # 5 bit magnitude comparator
     plot(x, y)
 
-    if D > 0:   // NOT 2s complement MSB
+    if D > 0:   # NOT 2s complement MSB
         y = y + 1
         D = D - 2*dx
 

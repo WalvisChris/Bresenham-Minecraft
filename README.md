@@ -1,4 +1,4 @@
-# Bresenham's Algorith  
+# Bresenham's Algorithm  
 ```py
 dx = x1 - x0    # delta x
 dy = y1 - y0    # delta y
@@ -43,3 +43,4 @@ while true:
         err = err + dx
         y0 = y0 + sy
 ```
+_from wikipedia_

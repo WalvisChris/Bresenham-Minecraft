@@ -45,5 +45,5 @@ while true:
 ```
 _from wikipedia_  
 
-![bresenham](bresenham_scratch.png)  
-![bresenham full](bresenham_full_scratch.png)  
+![bresenham](bresenham_scratch.PNG)  
+![bresenham full](bresenham_full_scratch.PNG)  

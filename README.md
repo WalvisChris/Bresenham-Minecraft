@@ -45,5 +45,8 @@ while true:
 ```
 _from wikipedia_  
 
+# Bresenham in scratch.mit.edu  
 ![bresenham](bresenham_scratch.PNG)  
+
+# All octant Bresenham in scratch.mit.edu  
 ![bresenham full](bresenham_full_scratch.PNG)  

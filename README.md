@@ -45,8 +45,52 @@ while true:
 ```
 _from wikipedia_  
 
+# Mattbatwings all octant line draws  
+```py
+x = x0
+y = y0
+
+dx = abs(x1 - x0)
+dy = abs(y1 - y0)
+
+sx = sign(x1 - x0)
+sy = sign(y1 - y0)
+
+if dy > dx:
+    t = dx
+    dx = dy
+    dy = t
+    interchange = 1
+else:
+    interchange = 0
+
+E = 2*dy - dx
+A = 2*dy
+B = 2*(dy - dx)
+
+plot(x, y)
+
+for x from 0 to dx:
+    if E < 0:
+        if interchange == 1:
+            y = y + sy
+        else:
+            x = x + sx
+        E = E + A
+    else:
+        y = y + sy
+        x = x + sx
+        E = E + B
+    
+    plot(x, y)
+```
+_from mattbatwings_  
+
 # Bresenham in scratch.mit.edu  
 ![bresenham](bresenham_scratch.PNG)  
 
 # All octant Bresenham in scratch.mit.edu  
 ![bresenham full](bresenham_full_scratch.PNG)  
+
+# All octant Mattbatwings in scratch.mit.edu  
+![mattbatwings full](mattbatwings_scratch.PNG)  

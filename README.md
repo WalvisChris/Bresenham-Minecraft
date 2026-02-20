@@ -56,7 +56,7 @@ dy = abs(y1 - y0)
 sx = sign(x1 - x0)
 sy = sign(y1 - y0)
 
-if dy > dx:
+if dy > dx:     # swap dx <> dy
     t = dx
     dx = dy
     dy = t

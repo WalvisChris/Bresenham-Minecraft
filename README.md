@@ -43,4 +43,7 @@ while true:
         err = err + dx
         y0 = y0 + sy
 ```
-_from wikipedia_
+_from wikipedia_  
+
+![bresenham](bresenham_scratch.png)  
+![bresenham full](bresenham_full_scratch.png)  

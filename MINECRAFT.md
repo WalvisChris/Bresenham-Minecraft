@@ -1,4 +1,5 @@
 # 64x64 display bresenham all octant line renderer  
+## starting values  
 | Item | Bits | Mode | Range |
 |------|------|------|-------|
 | Input | 6b | 2s-complement | -64..63 |
@@ -8,3 +9,8 @@
 | 2*dy - dx | 8b | 2s-complement | -256..255 |
 | 2*dy | 7b | 2s-complement | -128..127 |
 | 2*(dy - dx) | 8b | 2s-complement | -256..255 |
+
+## loop logic  
+| Item | Bits | Mode | Range |
+|------|------|------|-------|
+|..|..|..|..|

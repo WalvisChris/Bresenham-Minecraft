@@ -18,15 +18,15 @@
 | Item | Bits | Mode | Range |
 |------|------|------|-------|
 | Input | 3b | unsigned | 0..7 |
-| x0 - x1 | 3b | unsigned | 0..7 |
-| 2*dy - dx | 5b | unsigned | 0..31 |
+| dx = x0 - x1 | 3b | unsigned | 0..7 |
+| D = 2*dy - dx | 5b | unsigned | 0..31 |
 
 ## loop logic  
 | Item | Bits | Mode | Range |
 |------|------|------|-------|
 | y = y + 1 | 3b | unsigned | 0..7 |
-| D - 2*dx | 5b | unsigned | 0..31 |
-| D + 2*dy | 5b | unsigned | 0..31 |
+| D = D - 2*dx | 5b | unsigned | 0..31 |
+| D = D + 2*dy | 5b | unsigned | 0..31 |
 
 ## other  
 | Item | Bits | Mode | Range |

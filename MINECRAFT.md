@@ -41,7 +41,7 @@ _These sizes are not required. I tried them at random before understanding and t
 |------|------|------|-------|-----------|
 | Input | 6b | 2s-complement | -32..31 | I want a 64x64 display |
 | x1 - x0 | 7b | 2s-complement | -64..63 | limits: `-32 - 31 = -63` and `31 - 0 = 31` |
-| dx = abs(x1 - x0) | 6b | unsigned | 0..63 | same limit but no signed bit |
+| dx = abs(x1 - x0) | 6b | unsigned | 0..63 | same size but no signed bit |
 | sx = sign(x1 - x0) | ANY | 2s-complement | ANY | just extend top bits |
 | Interchange | 1b | unsigned | 0..1 | boolean |
 | E = 2*dy - dx | 8b | 2s-complement | -128..127 | limits: `2*0 - 63 = -63` and `2*63 - 0 = 126` |

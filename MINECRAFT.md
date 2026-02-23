@@ -51,5 +51,5 @@ _These sizes are not required. I tried them at random before understanding and t
 | Item | Bits | Mode | Range | Reasoning |
 |------|------|------|-------|-----------|
 | x = x + sx | 6b | 2s-complement | -32..31 | display is 6b 2s-complement |
-| E = E + A | 7b | 2s-complement | -64..63 | testing cases |
-| E = E + B | 7b | 2s-complement | -64..63 | testing cases |
+| E = E + A | 7b | 2s-complement | -64..63 | testing limit cases |
+| E = E + B | 7b | 2s-complement | -64..63 | testing limit cases |

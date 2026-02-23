@@ -32,19 +32,19 @@
 |------|------|------|-------|
 | Display | 3b | unsigned | 0..7 |
 
-_these sizes are not required. I tried them at random before understanding and they worked. Assuming x1 > x0 and x0 >= 0 you will mostly use 3b unsigned, and when you multiply by 2 you might need 4b or even 5b unsigned._  
+_These sizes are not required. I tried them at random before understanding and they worked. Assuming x1 > x0 and x0 >= 0 you will mostly use 3b unsigned, and when you multiply by 2 you might need 4b or even 5b unsigned._  
 
 # 64x64 display bresenham all octant line renderer  
 ## starting values  
-| Item | Bits | Mode | Range |
-|------|------|------|-------|
-| Input | 6b | 2s-complement | -64..63 |
-| x1 - x0 | 7b | 2s-complement | -128..127 |
-| abs(x1 - x0) | 6b | unsigned | 0..63 |
-| sign(x1 - x0) | ANY | 2s-complement | ANY |
-| 2*dy - dx | 8b | 2s-complement | -256..255 |
-| 2*dy | 7b | 2s-complement | -128..127 |
-| 2*(dy - dx) | 8b | 2s-complement | -256..255 |
+| Item | Bits | Mode | Range | Reasoning |
+|------|------|------|-------|-----------|
+| Input | 6b | 2s-complement | -32..31 | I want a 64x64 display |
+| x1 - x0 | 7b | 2s-complement | -128..127 | limit is (-32 -31 = -63) |
+| abs(x1 - x0) | 6b | unsigned | 0..63 | x |
+| sign(x1 - x0) | ANY | 2s-complement | ANY | x |
+| 2*dy - dx | 8b | 2s-complement | -256..255 | x |
+| 2*dy | 7b | 2s-complement | -128..127 | x |
+| 2*(dy - dx) | 8b | 2s-complement | -256..255 | x |
 
 ## loop logic  
 | Item | Bits | Mode | Range |

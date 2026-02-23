@@ -57,7 +57,7 @@ _These sizes are not required. I tried them at random before understanding and t
 | sx = sign(x1 - x0) | ANY | 2s-complement | ANY | just extend top bits |
 | Interchange | 1b | unsigned | 0..1 | boolean |
 | E = 2*dy - dx | 8b | 2s-complement | -128..127 | limits: `2*0 - 63 = -63` and `2*63 - 0 = 126` |
-| A = 2*dy | 7b | 7b unsigned | 0..127 | limit: `2*63 = 126` |
+| A = 2*dy | 7b | unsigned | 0..127 | limit: `2*63 = 126` |
 | B = 2*(dy - dx) | 8b | 2s-complement | -128..127 | limits: `2*(0 - 63) = -63` and `2*(63 - 0) = 126` |
 
 ## loop logic  

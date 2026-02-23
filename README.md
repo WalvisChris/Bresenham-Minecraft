@@ -84,13 +84,4 @@ for x from 0 to dx:
     
     plot(x, y)
 ```
-_from mattbatwings_  
-
-# Bresenham in scratch.mit.edu  
-![bresenham](bresenham_scratch.PNG)  
-
-# All octant Bresenham in scratch.mit.edu  
-![bresenham full](bresenham_full_scratch.PNG)  
-
-# All octant Mattbatwings in scratch.mit.edu  
-![mattbatwings full](mattbatwings_scratch.PNG)  
+_from mattbatwings_   

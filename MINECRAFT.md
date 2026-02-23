@@ -68,6 +68,6 @@ _These sizes are not required. I tried them at random before understanding and t
 | E = E + B | 7b | 2s-complement | -64..63 | testing limit cases |
 
 ## other  
-| Item | Bits | Mode | Range |
-|------|------|------|-------|
-| Display | 6b | unsigned | 0..63 |
+| Item | Bits | Mode | Range | Reasoning |
+|------|------|------|-------|-----------|
+| Display | 6b | unsigned | 0..63 | adding +32 to X and Y |

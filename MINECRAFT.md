@@ -23,6 +23,7 @@
 | D - 2*dx | 5b | unsigned | 0..31 |
 | D + 2*dy | 5b | unsigned | 0..31 |
 | Display | 3b | unsigned | 0..7 |
+_these sizes are not required. I tried them at random before understanding and they worked. Assuming x1 > x0 and x0 >= 0 you will mostly use 3b unsigned, and when you multiply by 2 you might need 4b or even 5b unsigned._  
 
 # 64x64 display bresenham all octant line renderer  
 ## starting values  

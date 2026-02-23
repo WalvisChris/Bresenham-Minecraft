@@ -37,8 +37,10 @@ _these sizes are not required. I tried them at random before understanding and t
 | 2*dy - dx | 8b | 2s-complement | -256..255 |
 | 2*dy | 7b | 2s-complement | -128..127 |
 | 2*(dy - dx) | 8b | 2s-complement | -256..255 |
+|-|-|-|-|
 
 ## loop logic  
 | Item | Bits | Mode | Range |
 |------|------|------|-------|
 |..|..|..|..|
+|-|-|-|-|

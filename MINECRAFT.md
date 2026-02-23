@@ -48,8 +48,8 @@ _These sizes are not required. I tried them at random before understanding and t
 | B = 2*(dy - dx) | 7b | 2s-complement | -128..127 | limits are `2*(0 - 63) = -63` and `2*(63 - 0) = 126` |
 
 ## loop logic  
-| Item | Bits | Mode | Range |
-|------|------|------|-------|
+| Item | Bits | Mode | Range | Reasoning |
+|------|------|------|-------|-----------|
 | x = x + sx | .. | 2s-complement | .. | .. |
 | E = E + A | .. | 2s-complement | .. | .. |
 | E = E + B | .. | 2s-comeplement | .. | .. |

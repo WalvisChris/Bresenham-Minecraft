@@ -36,6 +36,18 @@
 _These sizes are not required. I tried them at random before understanding and they worked. Assuming x1 > x0 and x0 >= 0 you will mostly use 3b unsigned, and when you multiply by 2 you might need 4b or even 5b unsigned._  
 
 # 64x64 display bresenham all octant line renderer  
+## formula  
+![minecraft formula]()  
+
+## components  
+![minecraft build]()  
+1. 64x64 Display  
+2. Incrementor with load function (x)  
+3. Incrementor with load function (y)  
+5. Subtractor (x1 - x0)  
+6. Subtractor (y1 - y0)  
+7. ..
+
 ## starting values  
 | Item | Bits | Mode | Range | Reasoning |
 |------|------|------|-------|-----------|

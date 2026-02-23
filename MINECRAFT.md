@@ -24,6 +24,7 @@
 ## loop logic  
 | Item | Bits | Mode | Range |
 |------|------|------|-------|
+| y = y + 1 | 3b | unsigned | 0..7 |
 | D - 2*dx | 5b | unsigned | 0..31 |
 | D + 2*dy | 5b | unsigned | 0..31 |
 

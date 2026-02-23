@@ -39,12 +39,12 @@ _These sizes are not required. I tried them at random before understanding and t
 | Item | Bits | Mode | Range | Reasoning |
 |------|------|------|-------|-----------|
 | Input | 6b | 2s-complement | -32..31 | I want a 64x64 display |
-| x1 - x0 | 7b | 2s-complement | -128..127 | limit is (-32 -31 = -63) |
-| abs(x1 - x0) | 6b | unsigned | 0..63 | x |
-| sign(x1 - x0) | ANY | 2s-complement | ANY | x |
-| 2*dy - dx | 8b | 2s-complement | -256..255 | x |
-| 2*dy | 7b | 2s-complement | -128..127 | x |
-| 2*(dy - dx) | 8b | 2s-complement | -256..255 | x |
+| x1 - x0 | 7b | 2s-complement | -128..127 | limit is `-32 - 31 = -63` |
+| abs(x1 - x0) | 6b | unsigned | 0..63 | x | same limit but no signed bit |
+| sign(x1 - x0) | ANY | 2s-complement | ANY | just extend top bits |
+| 2*dy - dx | 7b | 2s-complement | -128..127 | limits are `2*63 - 0 = 126` and `2*0 - 63 = -63` |
+| 2*dy | 7b | 7b unsigned | 0..127 | limit is `2*63 = 126` |
+| 2*(dy - dx) | 7b | 2s-complement | -128..127 | limits are `2*(0 - 63) = -63` and `2*(63 - 0) = 126` |
 
 ## loop logic  
 | Item | Bits | Mode | Range |

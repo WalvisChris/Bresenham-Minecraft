@@ -96,5 +96,6 @@ _Last three rows failed, TODO!_
 ### loop logic
 | Code | Decimal | Bits | Size | Mode | Comment |
 |------|---------|---|------|------|---------|
+| ..    | ..    | ..    | ..    | ..    | .. |
 
 _TODO!_

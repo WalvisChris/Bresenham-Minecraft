@@ -60,9 +60,9 @@ if dy > dx:     # swap dx <> dy
     t = dx
     dx = dy
     dy = t
-    interchange = 1
+    interchange = 1     # interchange = (dy > dx)
 else:
-    interchange = 0
+    interchange = 0     # interchange = (dy > dx)
 
 E = 2*dy - dx
 A = 2*dy

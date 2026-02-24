@@ -83,5 +83,5 @@ _These sizes are not required. I tried them at random before understanding and t
 | y1 - y0 | 30 - 8 = **22** | 001 0110 | 7b | 2s-complement | # |
 | abs(x1 - x0) | abs(-14) = **14** | 00 1110 | 6b | unsigned | # |
 | abs(y1 - y0) | abs(22) = **22** | 01 0110 | 6b | unsigned | # |
-| sign(x1 - x0) | sign(-14) = -1 | 1111 1111 | ANY | 2s-complement | # |
-| sign(y1 - y0) | sign(22) = 1 | 0000 0001 | ANY | 2s-complement | # |
+| sign(x1 - x0) | sign(-14) = **-1** | 1111 1111 | ANY | 2s-complement | # |
+| sign(y1 - y0) | sign(22) = **1** | 0000 0001 | ANY | 2s-complement | # |

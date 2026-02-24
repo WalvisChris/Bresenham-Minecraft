@@ -15,21 +15,21 @@
 9. Adder (D + dy*2)  
 
 ## starting values  
-| Item | Bits | Mode | Range |
+| Item | Size | Mode | Range |
 |------|------|------|-------|
 | Input         | 3b | unsigned | 0..7 |
 | dx = x0 - x1  | 3b | unsigned | 0..7 |
 | D = 2*dy - dx | 5b | unsigned | 0..31 |
 
 ## loop logic  
-| Item | Bits | Mode | Range |
+| Item | Size | Mode | Range |
 |------|------|------|-------|
 | y = y + 1     | 3b | unsigned | 0..7 |
 | D = D - 2*dx  | 5b | unsigned | 0..31 |
 | D = D + 2*dy  | 5b | unsigned | 0..31 |
 
 ## other  
-| Item | Bits | Mode | Range |
+| Item | Size | Mode | Range |
 |------|------|------|-------|
 | Display | 3b | unsigned | 0..7 |
 
@@ -49,7 +49,7 @@ _These sizes are not required. I tried them at random before understanding and t
 7. ..
 
 ## starting values  
-| Item | Bits | Mode | Range | Reasoning |
+| Item | Size | Mode | Range | Reasoning |
 |------|------|------|-------|-----------|
 | Input                 | 6b    | 2s-complement | -32..31   | I want a 64x64 display |
 | x1 - x0               | 7b    | 2s-complement | -64..63   | limits: `-32 - 31 = -63` and `31 - 0 = 31` |
@@ -61,19 +61,19 @@ _These sizes are not required. I tried them at random before understanding and t
 | B = 2*(dy - dx)       | 8b    | 2s-complement | -128..127 | limits: `2*(0 - 63) = -126` and `2*(63 - 0) = 126` |
 
 ## loop logic  
-| Item | Bits | Mode | Range | Reasoning |
+| Item | Size | Mode | Range | Reasoning |
 |------|------|------|-------|-----------|
 | x = x + sx    | 6b | 2s-complement | -32..31 | display is 6b unsigned |
 | E = E + A     | 7b | 2s-complement | -64..63 | testing limit cases |
 | E = E + B     | 7b | 2s-complement | -64..63 | testing limit cases |
 
 ## other  
-| Item | Bits | Mode | Range | Reasoning |
+| Item | Size | Mode | Range | Reasoning |
 |------|------|------|-------|-----------|
 | Display | 6b | unsigned | 0..63 | adding +32 to X and Y input |
 
 ## TEST CASE  
-| Line | Decimal | b | Bits | Mode | Comment |
+| Code | Decimal | b | Size | Mode | Comment |
 |------|---------|---|------|------|---------|
 | x0                    | **24**                        | **--01 1000** | 6b    | 2s-complement | # |
 | x1                    | **10**                        | **--00 1010** | 6b    | 2s-complement | # |
@@ -90,4 +90,4 @@ _These sizes are not required. I tried them at random before understanding and t
 | dy - dx               | 14 - 22 = **-8**              | **-000 1000** | 7b    | 2s-complement | # subtracting two 6 bit unsigned numbers | 
 | B = 2*(dy - dx)       | 2*(14 - 22) = 2*-8 = **-16**  | **0001 0000** | 8b    | 2s-complement | # |
 
-_Last three rows failed, TODO._
+_Last three rows failed, TODO!_

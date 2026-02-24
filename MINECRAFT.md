@@ -72,16 +72,20 @@ _These sizes are not required. I tried them at random before understanding and t
 |------|------|------|-------|-----------|
 | Display | 6b | unsigned | 0..63 | adding +32 to X and Y input |
 
-## test case  
+## TEST CASE  
 | Line | Decimal | b | Bits | Mode | Comment |
 |------|---------|---|------|------|---------|
-| x0 | **24** | 01 1000 | 6b | 2s-complement | # |
-| x1 | **10** | 00 1010 | 6b | 2s-complement | # |
-| y0 | **8** | 00 1000 | 6b | 2s-complement | # |
-| y1 | **30** | 01 1110 | 6b | 2s-complement | # |
-| x1 - x0 | 10 - 24 = **-14** | 111 0010 | 7b | 2s-complement | # |
-| y1 - y0 | 30 - 8 = **22** | 001 0110 | 7b | 2s-complement | # |
-| abs(x1 - x0) | abs(-14) = **14** | 00 1110 | 6b | unsigned | # |
-| abs(y1 - y0) | abs(22) = **22** | 01 0110 | 6b | unsigned | # |
-| sign(x1 - x0) | sign(-14) = **-1** | 1111 1111 | ANY | 2s-complement | # |
-| sign(y1 - y0) | sign(22) = **1** | 0000 0001 | ANY | 2s-complement | # |
+| x0 | **24** | **01 1000** | 6b | 2s-complement | # |
+| x1 | **10** | **00 1010** | 6b | 2s-complement | # |
+| y0 | **8** | **00 1000** | 6b | 2s-complement | # |
+| y1 | **30** | **01 1110** | 6b | 2s-complement | # |
+| x1 - x0 | 10 - 24 = **-14** | **111 0010** | 7b | 2s-complement | # |
+| y1 - y0 | 30 - 8 = **22** | **001 0110** | 7b | 2s-complement | # |
+| dx = abs(x1 - x0) | abs(-14) = **14** | **00 1110** | 6b | unsigned | # |
+| dy = abs(y1 - y0) | abs(22) = **22** | **01 0110** | 6b | unsigned | # after this, dx and dy are swapped due to `interchange` |
+| sx = sign(x1 - x0) | sign(-14) = **-1** | **1111 1111** | ANY | 2s-complement | # |
+| sy = sign(y1 - y0) | sign(22) = **1** | **0000 0001** | ANY | 2s-complement | # |
+| A = 2*dy | 2*14 = **28** | **001 1100** | 7b | unsigned | # |
+| E = 2*dy - dx | 2*14 - 22 = 28 - 22 = **8** | **0000 1000** | 8b | 2s-complement | # |
+| dy - dx | 14 - 22 = **-8** | **000 1000** | 7b | 2s-complement | # subtracting two 6 bit unsigned numbers | 
+| B = 2*(dy - dx) | 2*(14 - 22) = 2*-8 = **-16** | **0001 0000** | 8b | 2s-complement | # |

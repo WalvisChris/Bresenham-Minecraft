@@ -17,16 +17,16 @@
 ## starting values  
 | Item | Bits | Mode | Range |
 |------|------|------|-------|
-| Input | 3b | unsigned | 0..7 |
-| dx = x0 - x1 | 3b | unsigned | 0..7 |
+| Input         | 3b | unsigned | 0..7 |
+| dx = x0 - x1  | 3b | unsigned | 0..7 |
 | D = 2*dy - dx | 5b | unsigned | 0..31 |
 
 ## loop logic  
 | Item | Bits | Mode | Range |
 |------|------|------|-------|
-| y = y + 1 | 3b | unsigned | 0..7 |
-| D = D - 2*dx | 5b | unsigned | 0..31 |
-| D = D + 2*dy | 5b | unsigned | 0..31 |
+| y = y + 1     | 3b | unsigned | 0..7 |
+| D = D - 2*dx  | 5b | unsigned | 0..31 |
+| D = D + 2*dy  | 5b | unsigned | 0..31 |
 
 ## other  
 | Item | Bits | Mode | Range |
@@ -51,21 +51,21 @@ _These sizes are not required. I tried them at random before understanding and t
 ## starting values  
 | Item | Bits | Mode | Range | Reasoning |
 |------|------|------|-------|-----------|
-| Input | 6b | 2s-complement | -32..31 | I want a 64x64 display |
-| x1 - x0 | 7b | 2s-complement | -64..63 | limits: `-32 - 31 = -63` and `31 - 0 = 31` |
-| dx = abs(x1 - x0) | 6b | unsigned | 0..63 | same size but no signed bit |
-| sx = sign(x1 - x0) | ANY | 2s-complement | ANY | just extend the top bit |
-| Interchange | 1b | unsigned | 0..1 | boolean |
-| E = 2*dy - dx | 8b | 2s-complement | -128..127 | limits: `2*0 - 63 = -63` and `2*63 - 0 = 126` |
-| A = 2*dy | 7b | unsigned | 0..127 | limit: `2*63 = 126` |
-| B = 2*(dy - dx) | 8b | 2s-complement | -128..127 | limits: `2*(0 - 63) = -126` and `2*(63 - 0) = 126` |
+| Input                 | 6b    | 2s-complement | -32..31   | I want a 64x64 display |
+| x1 - x0               | 7b    | 2s-complement | -64..63   | limits: `-32 - 31 = -63` and `31 - 0 = 31` |
+| dx = abs(x1 - x0)     | 6b    | unsigned      | 0..63     | same size but no signed bit |
+| sx = sign(x1 - x0)    | ANY   | 2s-complement | ANY       | just extend the top bit |
+| Interchange           | 1b    | unsigned      | 0..1      | boolean |
+| E = 2*dy - dx         | 8b    | 2s-complement | -128..127 | limits: `2*0 - 63 = -63` and `2*63 - 0 = 126` |
+| A = 2*dy              | 7b    | unsigned      | 0..127    | limit: `2*63 = 126` |
+| B = 2*(dy - dx)       | 8b    | 2s-complement | -128..127 | limits: `2*(0 - 63) = -126` and `2*(63 - 0) = 126` |
 
 ## loop logic  
 | Item | Bits | Mode | Range | Reasoning |
 |------|------|------|-------|-----------|
-| x = x + sx | 6b | 2s-complement | -32..31 | display is 6b unsigned |
-| E = E + A | 7b | 2s-complement | -64..63 | testing limit cases |
-| E = E + B | 7b | 2s-complement | -64..63 | testing limit cases |
+| x = x + sx    | 6b | 2s-complement | -32..31 | display is 6b unsigned |
+| E = E + A     | 7b | 2s-complement | -64..63 | testing limit cases |
+| E = E + B     | 7b | 2s-complement | -64..63 | testing limit cases |
 
 ## other  
 | Item | Bits | Mode | Range | Reasoning |

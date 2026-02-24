@@ -73,6 +73,7 @@ _These sizes are not required. I tried them at random before understanding and t
 | Display | 6b | unsigned | 0..63 | adding +32 to X and Y input |
 
 ## TEST CASE (24, 8) → (10, 30)  
+### starting values  
 | Code | Decimal | Bits | Size | Mode | Comment |
 |------|---------|---|------|------|---------|
 | x0                    | **24**                        | **--01 1000** | 6b    | 2s-complement | # |
@@ -91,3 +92,9 @@ _These sizes are not required. I tried them at random before understanding and t
 | B = 2*(dy - dx)       | 2*(14 - 22) = 2*-8 = **-16**  | **0001 0000** | 8b    | 2s-complement | # |
 
 _Last three rows failed, TODO!_
+
+### loop logic
+| Code | Decimal | Bits | Size | Mode | Comment |
+|------|---------|---|------|------|---------|
+
+_TODO!_

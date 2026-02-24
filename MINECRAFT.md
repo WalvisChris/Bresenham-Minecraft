@@ -73,7 +73,7 @@ _These sizes are not required. I tried them at random before understanding and t
 | Display | 6b | unsigned | 0..63 | adding +32 to X and Y input |
 
 ## TEST CASE  
-| Code | Decimal | b | Size | Mode | Comment |
+| Code | Decimal | Bits | Size | Mode | Comment |
 |------|---------|---|------|------|---------|
 | x0                    | **24**                        | **--01 1000** | 6b    | 2s-complement | # |
 | x1                    | **10**                        | **--00 1010** | 6b    | 2s-complement | # |

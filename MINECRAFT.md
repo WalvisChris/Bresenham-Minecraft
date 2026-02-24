@@ -72,7 +72,7 @@ _These sizes are not required. I tried them at random before understanding and t
 |------|------|------|-------|-----------|
 | Display | 6b | unsigned | 0..63 | adding +32 to X and Y input |
 
-## TEST CASE (24, 8) => (10, 30)  
+## TEST CASE (24, 8) → (10, 30)  
 | Code | Decimal | Bits | Size | Mode | Comment |
 |------|---------|---|------|------|---------|
 | x0                    | **24**                        | **--01 1000** | 6b    | 2s-complement | # |

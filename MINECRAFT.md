@@ -87,9 +87,9 @@ _These sizes are not required. I tried them at random before understanding and t
 | sx = sign(x1 - x0)    | sign(-14) = **-1**            | **1111 1111** | ANY   | 2s-complement | # |
 | sy = sign(y1 - y0)    | sign(22) = **1**              | **0000 0001** | ANY   | 2s-complement | # |
 | A = 2*dy              | 2*14 = **28**                 | **-001 1100** | 7b    | unsigned      | # |
-| E = 2*dy - dx         | 2*14 - 22 = 28 - 22 = **8**   | **0000 1000** | 8b    | 2s-complement | # |
-| dy - dx               | 14 - 22 = **-8**              | **-000 1000** | 7b    | 2s-complement | # subtracting two 6 bit unsigned numbers | 
-| B = 2*(dy - dx)       | 2*(14 - 22) = 2*-8 = **-16**  | **0001 0000** | 8b    | 2s-complement | # |
+| E = 2*dy - dx         | 2*14 - 22 = 28 - 22 = **6**   | **0000 0110** | 8b    | 2s-complement | # |
+| dy - dx               | 14 - 22 = **-8**              | **-111 1000** | 7b    | 2s-complement | # subtracting two 6 bit unsigned numbers | 
+| B = 2*(dy - dx)       | 2*(14 - 22) = 2*-8 = **-16**  | **1111 0000** | 8b    | 2s-complement | # |
 
 _Last three rows failed, TODO!_
 

@@ -98,11 +98,19 @@ _These sizes are not required. I tried them at random before understanding and t
 
 _TODO!_
 
-# 8b Carry Cancle Adder  
+# 8b Carry Cancel Adder  
 ![image](media/)  
 # 8b Instant Signum
 ![image](media/8-bit-instant-signum.png)  
 # 8b Absolute Value  
 ![image](media/8-bit-absolute-value.png)  
+# 8b Magnitude Comparator  
+![image]()    
+# 8b Incrementor with Load function  
+![image]()  
 # 64x64 Matrix Decoder  
 ![image](media/64x64_matrix_decoder.png)  
+# Classic Crosswire  
+![image](media/classic_crosswire.png)  
+# 8b Swapper  
+![image](media/8-bit-swapper.png)  

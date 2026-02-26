@@ -91,11 +91,17 @@ _These sizes are not required. I tried them at random before understanding and t
 | dy - dx               | 14 - 22 = **-8**              | **-111 1000** | 7b    | 2s-complement | # subtracting two 6 bit unsigned numbers | 
 | B = 2*(dy - dx)       | 2*(14 - 22) = 2*-8 = **-16**  | **1111 0000** | 8b    | 2s-complement | # |
 
-_Last three rows failed, TODO!_
-
 ### loop logic
 | Code | Decimal | Bits | Size | Mode | Comment |
 |------|---------|---|------|------|---------|
 | ..    | ..    | ..    | ..    | ..    | .. |
 
 _TODO!_
+
+# Components  
+### 8 bit Carry Cancle Adder  
+![image](media/)  
+### 8 bit Instant Signum
+![image](media/8-bit-instant-signum.png)  
+### 8 bit Absolute Value  
+![image](media/8-bit-absolute-value.png)  

@@ -104,10 +104,10 @@ _TODO!_
 ![image](media/8-bit-instant-signum.png)  
 # 8b Absolute Value  
 ![image](media/8-bit-absolute-value.png)  
-# 8b Magnitude Comparator  
-![image]()    
-# 8b Incrementor with Load function  
-![image]()  
+# 8b Magnitude Comparator with Equals  
+![image](media/8bit_magnitude_comparator_with_equals.png)    
+# 8b Counter with Load
+![image](media/8bit_counter_load.png)  
 # 64x64 Matrix Decoder  
 ![image](media/64x64_matrix_decoder.png)  
 # Classic Crosswire  

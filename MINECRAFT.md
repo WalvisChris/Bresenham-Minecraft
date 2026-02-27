@@ -92,9 +92,9 @@ _These sizes are not required. I tried them at random before understanding and t
 | B = 2*(dy - dx)       | 2*(14 - 22) = 2*-8 = **-16**  | **1111 0000** | 8b    | 2s-complement | # |
 
 ### loop logic
-| Itteration | E < 0 | interchange | y += sy | x += sx | E += A | E += B |
-|------------|-------|-------------|---------|---------|--------|--------|
-| 0 | (6) no    | (22>14) yes    | yes    | yes    | no     | yes |
+| Itteration | E < 0 | interchange | y += sy | x += sx | E += A | E += B | new E |
+|------------|-------|-------------|---------|---------|--------|--------|-------|
+| 0 | (6) no    | (22>14) yes    | yes    | yes    | no     | yes   | 6 + -16 = -10 |
 
 _TODO!_
 

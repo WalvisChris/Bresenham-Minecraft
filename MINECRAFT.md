@@ -76,20 +76,20 @@ _These sizes are not required. I tried them at random before understanding and t
 ### starting values  
 | Code | Decimal | Bits | Size | Mode | Comment |
 |------|---------|---|------|------|---------|
-| x0                    | **24**                        | **--01 1000** | 6b    | 2s-complement | # |
-| x1                    | **10**                        | **--00 1010** | 6b    | 2s-complement | # |
-| y0                    | **8**                         | **--00 1000** | 6b    | 2s-complement | # |
-| y1                    | **30**                        | **--01 1110** | 6b    | 2s-complement | # |
-| x1 - x0               | 10 - 24 = **-14**             | **-111 0010** | 7b    | 2s-complement | # |
-| y1 - y0               | 30 - 8 = **22**               | **-001 0110** | 7b    | 2s-complement | # |
-| dx = abs(x1 - x0)     | abs(-14) = **14**             | **--00 1110** | 6b    | unsigned      | # |
-| dy = abs(y1 - y0)     | abs(22) = **22**              | **--01 0110** | 6b    | unsigned      | # after this, dx and dy are swapped |
-| sx = sign(x1 - x0)    | sign(-14) = **-1**            | **1111 1111** | ANY   | 2s-complement | # |
-| sy = sign(y1 - y0)    | sign(22) = **1**              | **0000 0001** | ANY   | 2s-complement | # |
-| A = 2*dy              | 2*14 = **28**                 | **-001 1100** | 7b    | unsigned      | # |
-| E = 2*dy - dx         | 2*14 - 22 = 28 - 22 = **6**   | **0000 0110** | 8b    | 2s-complement | # |
-| dy - dx               | 14 - 22 = **-8**              | **-111 1000** | 7b    | 2s-complement | # subtracting two 6 bit unsigned numbers | 
-| B = 2*(dy - dx)       | 2*(14 - 22) = 2*-8 = **-16**  | **1111 0000** | 8b    | 2s-complement | # |
+| x0                    | **24**                        | **--01 1000** | 6b    | 2s-complement | |
+| x1                    | **10**                        | **--00 1010** | 6b    | 2s-complement | |
+| y0                    | **8**                         | **--00 1000** | 6b    | 2s-complement | |
+| y1                    | **30**                        | **--01 1110** | 6b    | 2s-complement | |
+| x1 - x0               | 10 - 24 = **-14**             | **-111 0010** | 7b    | 2s-complement | |
+| y1 - y0               | 30 - 8 = **22**               | **-001 0110** | 7b    | 2s-complement | |
+| dx = abs(x1 - x0)     | abs(-14) = **14**             | **--00 1110** | 6b    | unsigned      | |
+| dy = abs(y1 - y0)     | abs(22) = **22**              | **--01 0110** | 6b    | unsigned      | after this, dx and dy are swapped |
+| sx = sign(x1 - x0)    | sign(-14) = **-1**            | **1111 1111** | ANY   | 2s-complement | |
+| sy = sign(y1 - y0)    | sign(22) = **1**              | **0000 0001** | ANY   | 2s-complement | |
+| A = 2*dy              | 2*14 = **28**                 | **-001 1100** | 7b    | unsigned      | |
+| E = 2*dy - dx         | 2*14 - 22 = 28 - 22 = **6**   | **0000 0110** | 8b    | 2s-complement | |
+| dy - dx               | 14 - 22 = **-8**              | **-111 1000** | 7b    | 2s-complement | subtracting two 6 bit unsigned numbers | 
+| B = 2*(dy - dx)       | 2*(14 - 22) = 2*-8 = **-16**  | **1111 0000** | 8b    | 2s-complement | |
 
 ### loop logic
 | Itteration | E < 0 | interchange | y += sy | x += sx | E += A | E += B | new E | new Position |
@@ -98,7 +98,7 @@ _These sizes are not required. I tried them at random before understanding and t
 | 0 | (6) no    | (22>14) yes   | x | x |   | x | 6 + -16 = **-10** | (24, 8) + (-1, 1) = **(23, 9)** |
 | 1 | (-10) yes | (22>14) yes   | x |   | x |   | -10 + 28 = **18** | (23, 9) + (0, 1) = **(23, 10)** |
 | 2 | (18) no   | (22>14) yes   | x | x |   | x | 18 + -16 = **2**  | (23, 10) + (-1, 1) = **(22, 11)** |
-| 3 | (2)  yes  | (22>14) yes   | x |   | x |   | 2 + 28 = **30**   | (22, 11) + (0, 1) = **(22, 12)** |
+| 3 | (2)  no   | (22>14) yes   | x | x |   | x | 2 + -16 = **-14**   | (22, 11) + (-1, 1) = **(21, 12)** |
 | 4 | ..        | (22>14) yes   |
 | 5 | ..        | (22>14) yes   |
 | 6 | ..        | (22>14) yes   |

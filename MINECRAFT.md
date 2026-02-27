@@ -92,14 +92,14 @@ _These sizes are not required. I tried them at random before understanding and t
 | B = 2*(dy - dx)       | 2*(14 - 22) = 2*-8 = **-16**  | **1111 0000** | 8b    | 2s-complement | # |
 
 ### loop logic
-| Code | Decimal | Bits | Size | Mode | Comment |
-|------|---------|---|------|------|---------|
-| ..    | ..    | ..    | ..    | ..    | .. |
+| Itteration | E < 0 | interchange | y += sy | x += sx | E += A | E += B |
+|------------|-------|-------------|---------|---------|--------|--------|
+| 0 | (6) no    | (22>14) yes    | yes    | yes    | no     | yes |
 
 _TODO!_
 
 # 8b Carry Cancel Adder  
-![image](media/)  
+![image]()  
 # 8b Instant Signum
 ![image](media/8-bit-instant-signum.png)  
 # 8b Absolute Value  

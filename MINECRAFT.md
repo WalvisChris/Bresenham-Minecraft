@@ -94,7 +94,9 @@ _These sizes are not required. I tried them at random before understanding and t
 ### loop logic
 | Itteration | E < 0 | interchange | y += sy | x += sx | E += A | E += B | new E |
 |------------|-------|-------------|---------|---------|--------|--------|-------|
-| 0 | (6) no    | (22>14) yes    | yes    | yes    | no     | yes   | 6 + -16 = -10 |
+| 0 | (6) no    | (22>14) yes   | yes   | yes   | no    | yes   | 6 + -16 = -10 |
+| 1 | (-10) yes | (22>14) yes   | yes   | no    | yes   | no    | -10 + 28 = 18 |
+| 2 | (18) no |
 
 _TODO!_
 

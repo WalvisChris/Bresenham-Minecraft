@@ -94,6 +94,7 @@ _These sizes are not required. I tried them at random before understanding and t
 ### loop logic
 | Itteration | E < 0 | interchange | y += sy | x += sx | E += A | E += B | new E | new Position |
 |------------|-------|-------------|---------|---------|--------|--------|-------|--------------|
+| start | | | | | | | **6** | **(24, 8)** |
 | 0 | (6) no    | (22>14) yes   | x   | x   |     | x   | 6 + -16 = **-10** | (24, 8) + (-1, 1) = **(23, 9)** |
 | 1 | (-10) yes | (22>14) yes   | x   |     | x   |     | -10 + 28 = **18** | |
 | 2 | (18) no   | (22>14) yes   |

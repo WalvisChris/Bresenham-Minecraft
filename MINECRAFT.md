@@ -112,6 +112,22 @@ _These sizes are not required. I tried them at random before understanding and t
 | 3 | (2)  no   | (22>14) yes   | x | x |   | x | 2 + -16 = **-14**   | (22, 11) + (-1, 1) = **(21, 12)** |
 | .. |
 
+## 3d cube wireframe  
+| x0 | x1 | y0 | y1 | Part |
+|----|----|----|----|------|
+| 22 | 18 | 4 | 14 | top |
+| 4 | 14 | -20 | 13 | top |
+| -20 | 13 | -14 | 16 | top |
+|-14 | 16 | 22 | 18 | top |
+|-17 | -14 | 5 | -8 | bottom |
+| 5 | -8 | 22 | -16 | bottom |
+| 22 | -16 | -8 | -27 | bottom |
+| -8 | -27 | -17 | -14 | bottom |
+| -20 | 13 | -17 | -14 | middle |
+| 5 | -8 | 4 | 14 | middle |
+| 22 | -16 | 22 | 18 | middle |
+| -8 | -27 | -14 | 16 | middle | 
+
 # 8b Carry Cancel Adder  
 ![image]()  
 # 8b Instant Signum

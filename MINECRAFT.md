@@ -36,17 +36,28 @@
 _These sizes are not required. I tried them at random before understanding and they worked. Assuming `0 < x0 < x1` you will mostly use 3b unsigned, and when you multiply by 2 you might need 4b or even 5b unsigned._  
 
 # 64x64 display bresenham all octant line renderer  
-## formula  
-![minecraft formula]()  
-
 ## components  
-![minecraft build]()  
-1. 64x64 Display  
-2. Incrementor with load function (x)  
-3. Incrementor with load function (y)  
-5. Subtractor (x1 - x0)  
-6. Subtractor (y1 - y0)  
-7. ..
+![minecraft build](media/minecraft_full_build.png)  
+1. Input  
+2. Carry Cancel Adder (subtraction) `y1 - y0`  
+3. Carry Cancel Adder (subtraction) `x1 - x0`  
+4. Signum `x1 - x0`  
+5. Signum `y1 - x0`  
+6. Absolute value `x1 - x0`  
+7. Absolute value `y1 - y0`  
+8. Magnitude comparator `dy > dx`  
+9. Swapper `dy <> dx`  
+10. Carry Cancel Adder (addition) `x += sx`  
+11. Carry Cancel Adder (addition) `y += sy`  
+12. Incrementor with Load `x=0`, `x++`  
+13. Magnitude comparator `x >= dx`  
+14. Carry Cancel Adder (subtraction) `2*(dy - dx)`  
+15. Carry Cancel Adder (subtraction) `2*dy - dx`  
+16. Carry Cancel Adder (addition) `E += B`  
+17. Carry Cancel Adder (addition) `E += A`  
+18. Carry Cancel Adder (addition) `x += 32`  
+19. Carry Cancel Adder (addition) `y += 32`  
+20. 64x64 Display  
 
 ## starting values  
 | Item | Size | Mode | Range | Reasoning |
